@@ -95,7 +95,7 @@ def find_log_files(directory):
 
 
 def detect_workload(json_path):
-    with open(json_path, encoding="utf-8") as fh:
+    with open(json_path, encoding="cp1252") as fh:
         data = json.load(fh)
     job_options = data["jobs"][0].get("job options", {})
     opts = dict(job_options)
